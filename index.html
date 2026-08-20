@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unfallmeldung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">MANZL HEIZUNG</p><h1>Arbeitsunfall melden</h1><p>Bitte direkt nach der Erstversorgung vollständig ausfüllen.</p></header>
+    <form id="report" novalidate>
+      <section><h2>Angaben zum Unfall</h2>
+        <label>Name der verletzten Person*<input name="name" autocomplete="name" required></label>
+        <div class="split"><label>Datum*<input name="date" type="date" required></label><label>Uhrzeit*<input name="time" type="time" required></label></div>
+        <label>Unfallort*<input name="location" placeholder="z. B. Baustelle, Keller, Werkstatt" required></label>
+        <label>Unfallhergang*<textarea name="incident" rows="4" placeholder="Was ist passiert?" required></textarea></label>
+        <label>Art und Umfang der Verletzung*<textarea name="injury" rows="3" required></textarea></label>
+      </section>
+      <section><h2>Erste Hilfe</h2>
+        <label>Erste-Hilfe-Maßnahmen*<textarea name="firstAid" rows="3" required></textarea></label>
+        <label>Name Ersthelfer/in*<input name="firstAider" required></label>
+        <label>Arzt / Krankenhaus <span>(falls aufgesucht)</span><input name="doctor"></label>
+        <label>Zeugen <span>(falls vorhanden)</span><input name="witnesses"></label>
+      </section>
+      <p class="privacy">Die Angaben werden ausschließlich zur Dokumentation des Arbeitsunfalls an die zuständige Verwaltung übermittelt.</p>
+      <button type="submit">E-Mail mit Meldung öffnen</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
